@@ -8,7 +8,7 @@ keyboard us
 
 network --onboot yes --bootproto dhcp --noipv6
 
-timezone --utc America/Chicago
+timezone --utc America/New_York
 
 zerombr
 clearpart --all --initlabel
@@ -58,10 +58,10 @@ useradd vagrant
 
 mkdir -m 0700 -p /home/vagrant/.ssh
 
-curl https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub >> /home/vagrant/.ssh/authorized_keys
+#curl https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub >> /home/vagrant/.ssh/authorized_keys
 
-chmod 600 /home/vagrant/.ssh/authorized_keys
-chown -R vagrant:vagrant /home/vagrant/.ssh
+#chmod 600 /home/vagrant/.ssh/authorized_keys
+#chown -R vagrant:vagrant /home/vagrant/.ssh
 
 sed -i 's/^\(Defaults.*requiretty\)/#\1/' /etc/sudoers
 
